@@ -8,11 +8,11 @@ router.get('/', function(req, res, next) {
         x=req.query.x;
 
     }
-    let r=Math.log2(x);
-    let t=Math.cosh(x);
-    let n=Math.floor(x);
+    let r=Math.fround(x);
+    let t=Math.random(x);
+    let n=Math.round(x);
     
-  res.render('computation', { x:x,log:r, cos:t, floor:n});
+  res.render('computation', { x:x,fround:r, random:t, round:n});
 });
 
 module.exports = router;
